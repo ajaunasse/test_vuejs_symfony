@@ -32,8 +32,7 @@ jobs:
       - uses: php-actions/composer@v5
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v2
+        uses: chindit/actions-phpunit-symfony@master
         with:
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
-          args: --coverage-text
