@@ -31,7 +31,7 @@ start-front:
 	cd front && $(npm) run dev
 
 php_cs-fix:
-	vendor/bin/php-cs-fixer fix
+	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php
 
 test:
 	vendor/bin/phpunit

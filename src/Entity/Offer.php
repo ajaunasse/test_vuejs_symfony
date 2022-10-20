@@ -51,9 +51,7 @@ final class Offer
     {
     }
 
-    /**
-     * @param array<string, string> $data
-     */
+    /** @param array<string, string> $data */
     public static function fromApiData(array $data): self
     {
         $product = new self();
