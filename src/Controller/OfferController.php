@@ -47,7 +47,7 @@ final class OfferController extends AbstractController
 
         $errors = $this->validator->validate($offer);
 
-        if ($errors->count() !== 0) {
+        if ($errors->count() > 0) {
             return new JsonResponse(ErrorsValidatorFactory::formatErrors($errors), Response::HTTP_BAD_REQUEST);
         }
 
