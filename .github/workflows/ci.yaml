@@ -29,10 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: php-actions/composer@v5
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: PHPUnit Tests
+      - name: PHPUnit
         uses: chindit/actions-phpunit-symfony@master
-        with:
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
